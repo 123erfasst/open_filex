@@ -1,23 +1,13 @@
 # open_filex
-[![pub package](https://img.shields.io/pub/v/open_filex.svg)](https://pub.dev/packages/open_filex)
+[![pub package](https://img.shields.io/pub/v/open_filex.svg)](https://pub.dartlang.org/packages/open_filex)
+
+**NOTICE**: This package is forked from [here](https://github.com/crazecoder/open_file) to remove a dangerous permission in android 
 
 A plug-in that can call native APP to open files with string result in flutter, support iOS(DocumentInteraction) / android(intent) / PC(ffi) / web(dart:html)
 
-## Notice
-This package is a fork of [open_file](https://pub.dev/packages/open_file) to fix the following issues:
-- Remove `REQUEST_INSTALL_PACKAGES` permission in Android to comply with GooglePlay publish policies
-- Update [ffi](https://pub.dev/packages/ffi) to 2.0.1+
-- Upgrade support for [granular media permissions](https://developer.android.com/about/versions/13/behavior-changes-13#granular-media-permissions) in Android 13
-- Fix plugin lifecycle onDetachedFromActivity in Android
-- Fix viewController is not recognized in iOS
-- Fix parse args not filtering commands properly
-- Replace JCenter with MavenCentral in Android build.gradle repositories (since JCenter becomes unreachable sometimes due to it's end of life)
-
-For full list of changes see [CHANGELOG](https://pub.dev/packages/open_filex/changelog)
-
 ## Usage
 
-To use this plugin, add [open_filex](https://pub.dev/packages/open_filex/install) as a dependency in your pubspec.yaml file.
+To use this plugin, add [open_filex](https://pub.dartlang.org/packages/open_filex#-installing-tab-) as a dependency in your pubspec.yaml file.
 ```yaml
 dependencies:
   open_filex: ^lastVersion
@@ -28,6 +18,7 @@ dependencies:
 import 'package:open_filex/open_filex.dart';
 
 OpenFilex.open("/sdcard/example.txt");
+//OpenFilex.open("/sdcard/example.txt", type: "text/plain", uti: "public.plain-text");
 ```
 
 ## Support
@@ -128,14 +119,6 @@ when Conflict with other plugins about FileProvider, add code below in your /and
     </application>
 </manifest>
 ```
-furthermore add code below in your `/android/app/src/main/res/xml/filepaths.xml`
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <external-path name="external_storage_directory" path="." />
-</resources>
-```
-
 when Android dependency 'com.android.support:appcompat-v7' has different version for the compile error, add code below in your /android/build.gradle
 ```gradle
 subprojects {

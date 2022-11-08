@@ -1,37 +1,3 @@
-## 4.3.1
-* Update README.md
-
-## 4.3.0
-* Replace JCenter with MavenCentral in Android build.gradle repositories (Thanks to [@BetterB0y](https://github.com/BetterB0y))
-
-## 4.2.2
-* Update CHANGELOG.md
-
-## 4.2.1 
-* Update CHANGELOG.md
-
-## 4.2.0
-* Upgrade support for Granular media permissions in Android 13 [Commit#261f446](https://github.com/javaherisaber/open_filex/commit/261f4463835eb293a059bc09030443d5093bcbd2) (Thanks to [@0975086498](https://github.com/0975086498))
-* Remove usages of `REQUEST_INSTALL_PACKAGES` in Android plugin [PR#1](https://github.com/javaherisaber/open_filex/pull/1) (Thanks to [@thebeast1](https://github.com/thebeast1))
-* Upgrade example project with latest version of flutter (3.3.5) and Android 13 [Commit#9d2027d](https://github.com/javaherisaber/open_filex/commit/9d2027d4063194c822bb81c7a74ff20aadb0f2ee)
-
-## 4.1.1
-* Add filePaths instruction for Android in README.md
-* Fix parse args not filtering commands properly
-* Fix viewController is not recognized in iOS
-
-## 4.1.0
-* Fixed Plugin lifecycle onDetachedFromActivity in Android
-* Add getExternalFilesDir when checking if a path requires a permission
-
-## 4.0.1
-* Update readme descriptions
-
-## 4.0.0
-* Update ffi to 2.0.1
-* Require Flutter 3.0.0+ and Dart 2.17.0+ (because of ffi 2.0.0+)
-* Update example project with latest version of Flutter (3.0.5)
-
 ## 3.4.0
 * Fix podspec in ios not resolved
 ## 3.3.0
